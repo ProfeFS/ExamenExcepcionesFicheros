@@ -41,9 +41,6 @@ public class GestionInventarioLibros {
 		} catch (IOException e) {
 			System.out.println("Error al leer archivo de disco: " + e.getMessage());
 		}
-
-		return libros;
-
 	}
 
 	private Libro lineaToLibro(String linea) {
