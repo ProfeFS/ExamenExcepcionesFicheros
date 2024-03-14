@@ -1,0 +1,21 @@
+2024-03-14T13:52:21.334762100| Agregado Libro con id: 1
+2024-03-14T13:52:21.342269700| Agregado Libro con id: 2
+2024-03-14T13:52:21.343285400| El libro con id: 1 ya existe, se actualizará la cantidad
+2024-03-14T13:52:21.343285400| Error al eliminar libro: 6 No existe
+2024-03-14T13:52:21.344277500| Eliminado libro con id: 2
+2024-03-14T13:52:21.349269800| Guardado en disco: 
+2024-03-14T13:52:21.351351100| Realizada copia de respaldo: 2024-03-14T13:54:28.371510700| El libro con id: 1ya existe, se actualizará la cantidad
+2024-03-14T13:54:28.380518900| Agregado Libro con id: 2
+2024-03-14T13:54:28.380518900| El libro con id: 1ya existe, se actualizará la cantidad
+2024-03-14T13:54:28.380518900| Error al eliminar libro: 6No existe
+2024-03-14T13:54:28.390179400| Eliminado libro con id: 2
+2024-03-14T13:54:28.396187100| Guardado en disco: 
+2024-03-14T13:54:28.397186900| Realizada copia de respaldo: 
+
+2024-03-14T13:55:36.390515800| El libro con id: 1ya existe, se actualizará la cantidad
+2024-03-14T13:55:36.399518600| Agregado Libro con id: 2
+2024-03-14T13:55:36.399518600| El libro con id: 1ya existe, se actualizará la cantidad
+2024-03-14T13:55:36.399518600| Error al eliminar libro: 6No existe
+2024-03-14T13:55:36.400515600| Eliminado libro con id: 2
+2024-03-14T13:55:36.405516200| Guardado en disco: 
+2024-03-14T13:55:36.407516| Realizada copia de respaldo: 
