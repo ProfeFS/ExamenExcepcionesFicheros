@@ -25,7 +25,7 @@ public class GestionInventarioLibros {
 		rutalogs = Paths.get(RUTA_LOGS);
 		libros = new ArrayList<>();
 		gestionarRutas();
-		libros = leerInventarioDeDisco();
+		leerInventarioDeDisco();
 	}
 
 	private List<Libro> leerInventarioDeDisco() {
