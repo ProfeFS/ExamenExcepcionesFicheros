@@ -18,7 +18,6 @@ public class GestionInventarioLibros {
 	private Path rutaInventario;
 	private Path rutaRespaldo;
 	private Path rutalogs;
-	private String traza;
 
 	public GestionInventarioLibros() {
 		rutaRespaldo = Paths.get(RUTA_RESPALDO);
@@ -31,11 +30,11 @@ public class GestionInventarioLibros {
 
 	private List<Libro> leerInventarioDeDisco() {
 		try {
-			Path ruta = Paths.get(RUTA_INVENTARIO);
-			if (!Files.exists(ruta)) {
-				Files.createFile(ruta);
+			if (!Files.exists(rutaInventario)) {
+				Files.createFile(rutaInventario);
 			}
-			List<String> inventario = Files.readAllLines(ruta);
+			
+			List<String> inventario = Files.readAllLines(rutaInventario);
 			for (String linea : inventario) {
 				libros.add(lineaToLibro(linea));
 			}
@@ -108,13 +107,13 @@ public class GestionInventarioLibros {
 		try {
 			if (libroaEliminar != null) {
 				libros.remove(libroaEliminar);
-				msgLogs = "Eliminado libro con id: " +  id;
+				msgLogs = "Eliminado libro con id: " + id;
 			} else {
 				msgLogs = "Error al eliminar libro: " + id + "No existe";
 				throw new LibroNoEncontradoException(msgLogs);
 			}
 
-		} catch (LibroNoEncontradoException e ) {
+		} catch (LibroNoEncontradoException e) {
 			System.out.println(e);
 		} finally {
 			try {
@@ -124,7 +123,6 @@ public class GestionInventarioLibros {
 				e.printStackTrace();
 			}
 		}
-		
 
 	}
 
@@ -148,7 +146,7 @@ public class GestionInventarioLibros {
 
 	private void crearTraza(String action) throws IOException {
 		String log = LocalDateTime.now() + "| " + action;
-		Files.writeString(rutalogs, System.lineSeparator()+log, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+		Files.writeString(rutalogs, System.lineSeparator() + log, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
 	}
 
 }
